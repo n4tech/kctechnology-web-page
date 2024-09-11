@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="contact.css">
+
+</head>
+<body>
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="KC-logo-1.png" alt="KC_1" class="h-12 md:h-16 ml-6 mr-20" style="width: 75px; height: 75px;">
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <button id="menu-toggle"
+                    class="md:hidden flex items-center px-2 py-1 text-blue-800 hover:text-blue-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+                <!-- Navigation Menu -->
+                <nav id="menu" class="hidden md:flex flex-grow justify-end">
+                    <ul class="flex space-x-12">
+                        <li><button class="text-black hover:text-blue-300 font-extralight" onclick="window.location.href='kc-site.html';">Ana Sayfa</button></li>
+                        <li class="relative dropdown">
+                            <a href="about.html"><button class="text-black hover:text-blue-300 font-extralight">Hakkımızda</button></a>
+                            
+                        </li>
+                        <li class="relative dropdown font-extralight">
+                            <button class="text-black hover:text-blue-300 font-extralight">Hizmetler</button>
+                            <div class="dropdown-menu w-48">
+                                <ul class="space-y-2 py-2">
+                                    <li><a href="itservis.html"
+                                            class="block px-4 py-2 text-black hover:bg-gray-100 hover:text-blue-300">IT Service
+                                            </a></li>
+                                    <li><a href="network.html"
+                                            class="block px-4 py-2 text-black hover:bg-gray-100 hover:text-blue-300">Network Service
+                                            </a></li>
+                                    <li><a href="software.html"
+                                            class="block px-4 py-2 text-black hover:bg-gray-100 hover:text-blue-300">Software Service
+                                            </a></li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="relative dropdown">
+                            <a href="contact.html"><button class="text-black hover:text-blue-300 font-extralight">İletişim</button></a>
+                            
+                        </li>
+                        <li class="relative dropdown">
+                            <a href="cv.html"><button class="text-black hover:text-blue-300 font-extralight">Kariyer</button></a>
+                            
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="fixed top-0 right-0 w-48 h-full bg-white shadow-lg overflow-y-auto transform transition-transform duration-300 ease-in-out z-50">
+                <button id="menu-close" class="text-gray-700 p-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <ul class="space-y-4 p-4">
+                    <li class="relative dropdown">
+                        <a href="kc-site.html"><button class="mobile-menu-item w-full text-right">Ana
+                            Sayfa</button></a>
+                    </li>
+                    <li class="relative dropdown">
+                        <a href="about.html"><button class="mobile-menu-item w-full text-right">Hakkımızda</button></a>
+                        
+                    </li>
+                    <li class="relative dropdown">
+                        <button class="mobile-menu-item w-full text-right">Hizmetler</button>
+                        <ul class="dropdown-menu w-full text-right space-y-2 pt-2 pl-4">
+                            <li><a href="itservis.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">IT Service</a>
+                            </li>
+                            <li><a href="software.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">Software Service</a>
+                            </li>
+                            <li><a href="network.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">Network Service</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    
+                    <li class="relative dropdown">
+                        <a href="cv.html"><button class="mobile-menu-item w-full text-right">Kariyer</button></a>
+                    </li>
+                    <li class="relative dropdown">
+                        <a href="contact.html"><button class="mobile-menu-item w-full text-right">İletişim</button></a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    
+    </header>
+<div class="container mx-auto ">
+    <div class="flex flex-col md:flex-row gap-2">
+
+    <section class="flex-1" id="contact">
+        <h2>Bize Ulaşın</h2>
+        <p>Aşağıdaki formu doldurarak bizimle iletişime geçebilirsiniz:</p>
+        <form action="submit_contact.php" method="post">
+            <label for="name">Adınız:</label>
+            <input type="text" id="name" name="name" class="border border-gray-800 rounded px-4 py-2" required>
+
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" class="border border-gray-800 rounded px-4 py-2" required>
+
+            <label for="subject">Konu:</label>
+            <input type="text" id="subject" name="subject" class="border border-gray-800 rounded px-4 py-2" required>
+
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" rows="4" class="border border-gray-800 rounded px-4 py-2" required></textarea>
+
+            <a href="mailto:oguzhandenli0542@gmail.com?subject=Merhaba&body=Bu%20bir%20test%20ileti%C5%9Fim%20mesaj%C4%B1d%C4%B1r." 
+   class="bg-blue-700 text-white text-center px-4 py-2 rounded inline-block">CV Gönder</a>
+        </form>
+    </section>
+    <section class="flex-1" id="map">
+        <h2 class="font-extralight font-bold">KONUMUMUZ:</h2>
+        <iframe
+
+  width="760"
+
+  height="550"
+
+  style="border:0;"
+
+  loading="lazy"
+
+  allowfullscreen
+
+  src=https://www.google.com/maps/embed/v1/place?q=36.9036422,30.7571363&key=AIzaSyBO8RT_D2FyCaXWs3wvvCcgFPLjKPxH8Q8&q>
+
+</iframe>
+    </section>
+</div>
+</div>
+
+    <footer class="foot relative py-10">
+        <div class="mx-20">
+            <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+            <div class="relative z-10 text-white  grid grid-cols-1 md:grid-cols-6 gap-4 ">
+                <!-- İlk Sütun -->
+                <div>
+                    <img src="KC-logo-1.png" alt="Footer-logo" class="w-full h-auto">
+                </div>
+                <!-- İkinci Sütun -->
+                <div class="text-white">
+                    <h1 class=" mobile-menu-item w-full text-left font-bold font-extralight ">KC YAZILIM VE BİLİŞİM TEKNOLOJİLERİ</h1>
+                    <br>
+                    <p class=" mobile-menu-item text-left w-full font-extralight">Firmamız, altyapı yönetimi, siber güvenlik ve yazılım çözümleri ile işletmelere kapsamlı IT ve ağ hizmetleri sunar.</p>
+            
+                </div>
+    
+                <!-- Üçüncü Sütun -->
+                <div class="text-white">
+                    <h1 class=" mobile-menu-item w-full text-left font-bold font-extralight ">  HİZMETLERİMİZ</h1>
+                    <br>
+                    <a href="itservis.html"><button class="footlink mobile-menu-item w-full text-left font-extralight ">  IT Servis</button></a>
+                    <a href="network.html"><button class="footlink mobile-menu-item w-full text-left font-extralight ">  Network Servis</button></a>
+                    <a href="software.html"><button class="footlink mobile-menu-item w-full text-left font-extralight ">  Software Servis</button></a>
+                    <a href="#"><Servis class="footlink mobile-menu-item w-full text-left font-extralight ">  Servis1</button></a>
+            
+                </div>
+                <div class=" mobile-menu-item w-full text-left font-extralight m-0 text-white">
+                    <p class="font-extralight font-bold mobile-menu-item mt-0" >İLETİŞİM BİLGİLERİ</p>
+                    <br>
+                    <p class="font-extralight m-0 text-base">E-posta: info@kc.technology</p>
+                    <p class="font-extralight m-0 text-base">Telefon numarası: 0242 310 5400</p>
+                    <p class="font-extralight m-0 text-base">Adres: Göksu mah. 6805 sk. No: 9 İç Kapı No: 23 Kepez/Antalya</p>
+                </div>
+                <div class="">
+                    <p class="font-extralight font-bold mobile-menu-item text-white" >SOSYAL MEDYA</p>
+                    <br>
+                    <a href="#"><img class="social-media " src="instagram_icon.png" alt="instagram"></a>
+                    <br>       
+                    <a href="#"><img class="social-media " src="facebook_icon.png" alt="facebook"></a>
+                    <br>
+                    <a href="#"><img class="social-media " src="WhatsApp_icon.png" alt="whatsapp"></a>
+                </div>
+                <div>
+                    <img src="KC-logo-1.png" alt="Footer-logo" class="w-full h-auto">
+                </div>
+                
+                
+            </div>
+            
+            <div class="relative py-10 text-white "> 
+                
+                <p class="fhead mb-2 text-base overline" >&copy; 2024 KC Yazılım. All rights reserved.</p>
+               
+            </div>
+        </div>
+</footer>
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.add('open');
+    });
+
+    document.getElementById('menu-close').addEventListener('click', function () {
+        document.getElementById('mobile-menu').classList.remove('open');
+    });
+
+    document.querySelectorAll('.mobile-menu-item').forEach(item => {
+        item.addEventListener('click', function () {
+            const dropdown = this.nextElementSibling;
+            if (dropdown && dropdown.classList.contains('dropdown-menu')) {
+                dropdown.classList.toggle('open');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
