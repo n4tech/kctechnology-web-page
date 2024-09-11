@@ -92,9 +92,11 @@
                         <a href="about.html"><button class="mobile-menu-item w-full text-right">Hakkımızda</button></a>
                         
                     </li>
-                    <li class="relative dropdown">
-                        <button class="mobile-menu-item w-full text-right">Hizmetler</button>
-                        <ul class="dropdown-menu w-full text-right space-y-2 pt-2 pl-4">
+                    <li >
+                        <button class="dropdown-button mobile-menu-item w-full text-right"><span class="arrow">&#9662;</span> Hizmetler
+                            
+                        </button>
+                        <ul class="dropdown-content w-full text-right space-y-2 pt-2 pl-4">
                             <li><a href="itservis.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">IT Service</a>
                             </li>
                             <li><a href="software.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">Software Service</a>
@@ -103,6 +105,7 @@
                             </li>
                             
                         </ul>
+                        
                     </li>
                     
                     
@@ -209,6 +212,13 @@
             }
         });
     });
+</script>
+<script>
+    document.querySelector('.dropdown-button').addEventListener('click', function() {
+const dropdownContent = document.querySelector('.dropdown-content');
+dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+});
+
 </script>
 </body>
 </html>

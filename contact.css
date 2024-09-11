@@ -11,6 +11,10 @@ body {
     padding: 0;
     background: #f4f4f4;
 }
+.dropdown-content {
+    display: none;
+    
+}
 
 html{
     scroll-behavior: smooth;

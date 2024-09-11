@@ -24,6 +24,10 @@ body {
     font-style: normal;
 
 }
+.dropdown-content {
+    display: none;
+    
+}
 html{
     scroll-behavior: smooth;
 }

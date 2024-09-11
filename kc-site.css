@@ -12,6 +12,10 @@
             transition: transform 0.3s ease-in-out;
             /* Smooth transition */
         }
+        .dropdown-content {
+            display: none;
+            
+        }
 
         #mobile-menu.open {
             transform: translateX(0);

@@ -16,6 +16,10 @@
     font-style: normal;
 
 }
+.dropdown-content {
+    display: none;
+    
+}
 
 .dropdown-menu {
     display: none;
