@@ -115,8 +115,8 @@
         </div>
     
     </header>
-<div class="container mx-auto ">
-    <div class="flex flex-col md:flex-row gap-2">
+<div class="container mx-auto  ">
+    <div class="flex flex-wrap lg:flex-nowrap gap-2">
 
     <section class="flex-1" id="contact">
         <h2>Bize Ulaşın</h2>
@@ -135,18 +135,17 @@
             <textarea id="message" name="message" rows="4" class="border border-gray-800 rounded px-4 py-2" required></textarea>
 
             <a href="mailto:info@kc.technology" 
-   class="bg-blue-700 text-white text-center px-4 py-2 rounded inline-block">CV Gönder</a>
+   class="bg-blue-700 text-white text-center px-4 py-2 rounded inline-block">Gönder</a>
         </form>
     </section>
-    <section class="flex-1" id="map">
+    <section class="flex-1 " id="map">
         <h2 class="font-extralight font-bold">KONUMUMUZ:</h2>
+        <div class="w-full h-full  rounded-lg overflow-hidden shadow-md">
         <iframe
 
-  width="760"
+ class="w-full h-full "
 
-  height="550"
-
-  style="border:0;"
+  style="border:0; height: 95%;"
 
   loading="lazy"
 
@@ -155,6 +154,7 @@
   src=https://www.google.com/maps/embed/v1/place?q=36.9036422,30.7571363&key=AIzaSyBO8RT_D2FyCaXWs3wvvCcgFPLjKPxH8Q8&q>
 
 </iframe>
+</div>
     </section>
 </div>
 </div>
