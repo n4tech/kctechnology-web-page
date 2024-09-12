@@ -11,10 +11,30 @@
             /* Hide menu by default */
             transition: transform 0.3s ease-in-out;
             /* Smooth transition */
+            flex-direction: column;
+            display: flex;
         }
         .dropdown-content {
             display: none;
             
+        }
+        .menu-footer{
+            margin-top: auto;
+            text-align: center;
+            background-color: #777;
+
+        }
+        .menu-header{
+            margin-top:0 ;
+            align-items:right;
+            display: flex;
+            
+            
+        }
+        .close-button{
+            background: none;
+            border: none;
+            cursor: pointer;
         }
 
         #mobile-menu.open {
