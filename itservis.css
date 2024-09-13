@@ -28,6 +28,31 @@ body {
     display: none;
     
 }
+#mobile-menu {
+    display: flex; /* Flexbox düzeni kullanılıyor */
+    flex-direction: column; /* Dikey hizalama */
+}
+
+.menu-header {
+    margin-top: 0;
+    align-items: right;
+    display: flex;
+}
+
+.menu-footer {
+    margin-top: auto; /* Düğmeyi en alta iter */
+    text-align: center;
+    background-color: #a8bfce;
+    padding: 10px 0; /* Düğme etrafında biraz boşluk */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px; /* İç boşluk ekleyin */
+    display: inline-block; /* Görünürlük sorunlarını önler */
+}
 html{
     scroll-behavior: smooth;
 }
