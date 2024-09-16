@@ -32,8 +32,8 @@
         .menu-footer {
             margin-top: auto; /* Düğmeyi en alta iter */
             text-align: center;
-            background-color: #a8bfce;
-            padding: 10px 0; /* Düğme etrafında biraz boşluk */
+            align-items: center;
+            padding: 10px ; /* Düğme etrafında biraz boşluk */
         }
         
         .close-button {
@@ -103,7 +103,7 @@
         .head-container{
             max-width: 80%;
             margin: 0 auto;
-            padding: 16px;
+        
         }
 
         /* Banner Image and Text Styling */

@@ -9,7 +9,7 @@ body {
 .head-container{
     max-width: 80%;
     margin: 0 auto;
-    padding: 16px;
+    
 }
 
 .container {
@@ -34,7 +34,7 @@ body {
 .menu-footer {
     margin-top: auto; /* Düğmeyi en alta iter */
     text-align: center;
-    background-color: #a8bfce;
+    
     padding: 10px 0; /* Düğme etrafında biraz boşluk */
 }
 
