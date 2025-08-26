@@ -1,403 +1,459 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="kc-site.css">
-    <title>KC Website</title>
-
-</head>
-
-<body class="bg-gray-100">
-    <header class="bg-white shadow">
-        <div class="head-container px-2 py-0">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="index.html"><img src="KC-logo-1.png" alt="kc-technology-hlogo" class="h-20 md:h-24 ml-6 mr-20" ></a>
-                </div>
-
-                <!-- Hamburger Menu Button -->
-                <button id="menu-toggle"
-                    class="md:hidden flex items-center px-2 py-1 text-blue-800 hover:text-blue-200">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-
-                <!-- Navigation Menu -->
-                <nav id="menu" class="hidden md:flex flex-grow justify-end font-extralight">
-                    <ul class="flex space-x-12">
-                        <li><button class="text-black hover:text-blue-300 font-extralight" onclick="window.location.href='#'; ">Ana
-                                Sayfa</button></li>
-                        <li class="relative dropdown">
-                            <a href="about.html"><button class="text-black hover:text-blue-300 font-extralight">Hakkımızda</button></a>
-                            
-                        </li>
-                        <li class="relative dropdown font-extralight">
-                            <button class="text-black hover:text-blue-300 font-extralight">Hizmetler</button>
-                            <div class="dropdown-menu w-48">
-                                <ul class="space-y-2 py-2">
-                                    <li><a href="itservis.html"
-                                            class="block px-4 py-2 text-black hover:bg-gray-100 hover:text-blue-300">IT Service
-                                            </a></li>
-                                    <li><a href="network.html"
-                                            class="block px-4 py-2 text-black hover:bg-gray-100 hover:text-blue-300">Network Service
-                                            </a></li>
-                                    <li><a href="software.html"
-                                            class="block px-4 py-2 text-black hover:bg-gray-100 hover:text-blue-300">Software Service
-                                            </a></li>
-                                    
-                                </ul>
-                            </div>
-                        </li>
-                        
-                        <li class="relative dropdown">
-                            <a href="contact.html"><button class="text-black hover:text-blue-300 font-extralight">İletişim</button></a>
-                            
-                        </li>
-                        <li class="relative dropdown">
-                            <a href="cv.html"><button class="text-black hover:text-blue-300 font-extralight">Kariyer</button></a>
-                            
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-    class="fixed top-0 right-0 w-48 h-full bg-white shadow-lg overflow-y-auto transform transition-transform duration-300 ease-in-out z-50 flex flex-col">
-    <div class="menu-header ml-8">
-        <img src="KC-logo-1.png" alt="menu-header-logo" style="width: 50px; height: 50px;">
-        <p class="font-bold font-extralight mt-4">KC YAZILIM</p>
-    </div>
-
-    <ul class="space-y-4 mt-4 mr-4 bg-white flex-grow">
-        <li class="relative dropdown">
-            <a href="index.html"><button class="mobile-menu-item w-full text-right">Ana Sayfa</button></a>
-        </li>
-        <li class="relative dropdown">
-            <a href="about.html"><button class="mobile-menu-item w-full text-right ">Hakkımızda</button></a>
-        </li>
-        <li>
-            <button class="dropdown-button mobile-menu-item w-full text-right "><span class="arrow">&#9662;</span> Hizmetler</button>
-            <ul class="dropdown-content w-full text-right space-y-2 pt-2 pl-4">
-                <li><a href="itservis.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">IT Servis</a></li>
-                <li><a href="software.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">Software Servis</a></li>
-                <li><a href="network.html" class="block text-black hover:bg-gray-100 hover:text-blue-300">Network Servis</a></li>
-            </ul>
-        </li>
-        <li class="relative dropdown">
-            <a href="cv.html"><button class="mobile-menu-item w-full text-right ">Kariyer</button></a>
-        </li>
-        <li class="relative dropdown">
-            <a href="contact.html"><button class="mobile-menu-item w-full text-right ">İletişim</button></a>
-        </li>
-    </ul>
-
-    <div class="menu-footer">
-        <button id="menu-close" class="close-button text-black  font-bold font-extralight" style="width: 65px; height: 65px;"><img src="menu-close-arrow.jpg" alt="menu-kapatma-butonu"></button>
-    </div>
-</div>
-        </div>
-    </header>
-    <!-- Banner Section -->
-    <div class="banner">
-        <div class="banner-text">
-            <h1 class=" ml-14 mr-20 text-4xl grid-cols-12 font-bold font-extralight md:col-span-5 md:col-start-0" >KC Yazılım ve Bilişim Teknolojileri</h1>
-            <p class="ml-14 mr-20 md:col-span-5 md:col-start-2  font-extralight mt-2">Your Systems Always Up!</p>
-            
-        </div>
-    </div>
-    <!-- New Section -->
-    <div class="container mx-auto max-w-screen-xl px-4">
-        <div class="flex flex-col lg:flex-row-reverse items-center justify-center gap-4 py-10">
-            <div class="hidden md:block justify-center items-center w-full lg:w-auto lg:h-[450px] py-4">
-                <img src="storyset1.png" class="max-w-full h-auto">
-            </div>
-            <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
-                <div class="text-3xl text-black font-bold  pb-5 ">KC Yazılım ve Bilişim Teknolojileri</div>
-               <span class="font-extralight">> Firmamız, dijital dönüşümde lider bir teknoloji ortağıdır. <br> <br>
-
-                > Müşterilerimize yenilikçi IT, ağ ve yazılım çözümleri sunarak rekabet avantajı sağlıyoruz. <br> <br>
-                
-                > Altyapı yönetimi, siber güvenlik, bulut çözümleri ve 7/24 teknik destek hizmetlerimizle operasyonlarınızı güvenli ve kesintisiz hale getiriyoruz. <br> <br>                
-                > Ağ çözümlerimizle, veri iletişiminizin güvenilirliğini artırıyor; yazılım hizmetlerimizle, özel ve ölçeklenebilir çözümler sunuyoruz. <br> <br>
-                
-                > Müşteri odaklı yaklaşımımızla iş süreçlerinizi optimize eder, büyümenizi destekleriz.</span>
-            </div>
-        </div>
-    </div>
-   
-
-    
-    <!-- Chart Section -->
-    <div class="mt-40 grid grid-cols-12 gap-4">
-        <h class="text-center text-4xl font-bold mb-20 col-span-12 font-extralight">Hizmetlerimiz ve Servislerimiz</h>
-        <div class="col-start-2 col-end-12 col-span-12 md:col-span-10 md:col-start-2 grid grid-cols-12 gap-4 ">
-            <!-- Placeholder for chart 1 -->
-            <div class="col-span-12 md:col-span-3"  onclick="window.location.href='itservis.html'">
-                <!-- Placeholder for chart 2 -->
-                <div class="hover:bg-gray-300 bg-gray-500 h-80 rounded shadow-lg" style="border-radius: 40px;" >
-                    <h1 class="centerhead font-bold  text-4x1 font-extralight">IT Servisimiz</h1>
-                    
-                    <p class="centerp font-extralight">Gelişen teknoloji dünyasında, işletmenizin güvenli ve kesintisiz çalışması için kapsamlı 
-                        IT hizmetleri sunuyoruz. Altyapı yönetimi, siber güvenlik, bulut çözümleri, 
-                        ağ kurulumları ve 7/24 teknik destek gibi hizmetlerimizle verimliliğinizi artırıyor
-                         ve dijital dönüşümünüzde yanınızda oluyoruz.
-                    </p>
-                    <br>
-                    
-                </div>
-            </div>
-            <div class="col-span-12 md:col-span-3 " onclick="window.location.href='network.html'">
-                <!-- Placeholder for chart 2 -->
-                <div class="hover:bg-green-200 bg-green-400 h-80 rounded shadow-lg" style="border-radius: 40px;">
-                    <h1 class="centerhead  font-bold text-4x1 font-extralight">Network Servisimiz</h1>
-                    
-                    <p class="centerp font-extralight">Firmamız, özel ağ çözümleri sunarak veri iletişiminizin kesintisiz ve güvenilir olmasını sağlar. 
-                        LAN, WAN, kablosuz ağ çözümleri, ağ güvenliği ve performans optimizasyonu ile 
-                        işletmenizin altyapısını en üst düzeyde tutarak 
-                        rakiplerinizin önünde olmanıza yardımcı oluruz.
-                    </p>
-                    <br>
-                    <br>
-                    
-
-                </div>
-            </div>
-            <div class="col-span-12 md:col-span-3 " onclick="window.location.href='software.html'">
-                <!-- Placeholder for chart 2 -->
-                <div class="hover:bg-purple-200  bg-purple-400 h-80 rounded shadow-lg" style="border-radius: 40px;">
-                    <h1 class="centerhead  text-4x1 font-bold font-extralight">Software Servisimiz</h1>
-                   
-                    <p class="centerp font-extralight">İhtiyacınıza özel yazılım çözümleri sunarak verimliliğinizi artırıyoruz. 
-                        Uzman ekibimiz, yazılım geliştirme, entegrasyon ve destek ile dijital dönüşümünüzde 
-                        rehberlik eder. Web, mobil ve masaüstü platformlarda kullanıcı dostu uygulamalar geliştirerek 
-                        iş süreçlerinizi hızlandırıyoruz.
-                    </p>
-                    <br>
-                    <br>
-                    
-                
-                </div>
-            </div>
-            <div class="col-span-12 md:col-span-3 " onclick="window.location.href='#'">
-                <!-- Placeholder for chart 2 -->
-                <div class="hover:bg-yellow-200 bg-yellow-400 h-80 rounded shadow-lg" style="border-radius: 40px;">
-                    <h1 class="centerhead  text-4x1 font-bold font-extralight">Danışmanlık Servisimiz</h1>
-                    
-                    <p class="centerp font-extralight">IT altyapısı, ağ yönetimi, yazılım geliştirme ve siber güvenlik alanlarında danışmanlık hizmetleri sunarak, 
-                        işletmenizin dijital dönüşüm sürecini destekliyoruz. Uzman ekibimiz, 
-                        mevcut teknolojik altyapınızı değerlendirip size özel çözümler geliştirir.</p>
-                    <br>
-                    <br>
-                    
-                   
-                
-                </div>
-            </div>
-            
-        </div>
-         
-    </div>
-    <div class="container mx-auto text-center mb-10 mt-40">
-        <h1 class="text-4xl font-bold ">Profesyoneller Bize Güveniyor</h1>
-    </div>
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 p-20 mb-40">
-        <!-- Image 1 -->
-        <div class="p-4  rounded">
-            <img src="pegas-logo.png" alt="Image 1" class="w-full h-auto rounded">
-        </div>
-
-        <!-- Image 2 -->
-        <div class="p-4  rounded">
-            <img src="logo-pgs.svg" alt="Image 2" class="w-full h-auto rounded">
-        </div>
-
-        <!-- Image 3 -->
-        <div class="p-4  rounded">
-            <img src="logo-dessole.svg" alt="Image 3" class="w-full h-auto rounded">
-        </div>
-
-        <!-- Image 4 -->
-        <div class="p-4  rounded">
-            <img src="logo-swandor.svg" alt="Image 4" class="w-full h-auto rounded">
-        </div>
-
-        <!-- Image 5 -->
-        <div class="p-4  rounded">
-            <img src="logo-woovo.svg" alt="Image 5" class="w-full h-auto rounded">
-        </div>
-    </div>
-    
-        
-        <script>/*project slide part*/
-            window.addEventListener('scroll', function() {
-    var elements = document.querySelectorAll('.project-card');
-    var scrollTop = window.pageYOffset;
-    var windowHeight = window.innerHeight;
-
-    elements.forEach(function(element) {
-        var elementOffsetTop = element.offsetTop;
-        var elementHeight = element.offsetHeight;
-
-        if (scrollTop + windowHeight > elementOffsetTop + 100 && scrollTop < elementOffsetTop + elementHeight) {
-            element.classList.add('visible');
-        } else {
-            element.classList.remove('visible');
-        }
-    });
-});
-
-
-        </script>
-    </div>
-    
-    
-    
-   
-    <footer class="foot relative py-10">
-        <div class="mx-20">
-            <div class="absolute inset-0 bg-black bg-opacity-80"></div>
-            <div class="relative z-10 text-white  grid grid-cols-1 md:grid-cols-6 gap-4 ">
-                <!-- İlk Sütun -->
-                <div>
-                    <img src="KC-logo-1.png" alt="Footer-logo" class="w-full h-auto">
-                </div>
-                <!-- İkinci Sütun -->
-                <div class="text-white">
-                    <h1 class=" mobile-menu-item w-full text-left font-bold font-extralight ">KC YAZILIM VE BİLİŞİM TEKNOLOJİLERİ</h1>
-                    <br>
-                    <p class=" mobile-menu-item text-left w-full font-extralight">Firmamız, altyapı yönetimi, siber güvenlik ve yazılım çözümleri ile işletmelere kapsamlı IT ve ağ hizmetleri sunar.</p>
-            
-                </div>
-    
-                <!-- Üçüncü Sütun -->
-                <div class="text-white">
-                    <h1 class=" mobile-menu-item w-full text-left font-bold font-extralight ">  HİZMETLERİMİZ</h1>
-                    <br>
-                    <a href="itservis.html"><button class="footlink mobile-menu-item w-full text-left font-extralight ">  IT Servisi</button></a>
-                    <a href="network.html"><button class="footlink mobile-menu-item w-full text-left font-extralight ">  Network Servisi</button></a>
-                    <a href="software.html"><button class="footlink mobile-menu-item w-full text-left font-extralight ">  Software Servisi</button></a>
-                    <a href="#"><Servis class="footlink mobile-menu-item w-full text-left font-extralight ">  Danışmanlık Servisi</button></a>
-            
-                </div>
-                <div class=" mobile-menu-item w-full text-left font-extralight m-0 text-white">
-                    <p class="font-extralight w-full mobile-menu-item mt-0 font-bold " >İLETİŞİM BİLGİLERİ</p>
-                    <br>
-                    <p class="font-extralight m-0 text-base">E-posta: info@kc.technology</p>
-                    <p class="font-extralight m-0 text-base">Telefon numarası: 0242 310 5400</p>
-                    <p class="font-extralight m-0 text-base">Adres: Göksu mah. 6805 sk. No: 9 İç Kapı No: 23 Kepez/Antalya</p>
-                </div>
-                <div class="">
-                    <p class="font-extralight font-bold  text-white " >SOSYAL MEDYA</p>
-                    <div class="">
-                        <br>
-                        <a href="#"><img class="social-media " src="instagram_icon.png" alt="instagram"></a>
-                        <br> 
-                        <a href="#"><img class="social-media " src="facebook_icon.png" alt="facebook"></a>
-                        <br>
-                        <a href="#"><img class="social-media " src="WhatsApp_icon.png" alt="whatsapp"></a>
-                    </div>
-                
-                </div>
-                <div>
-                    <img src="KC-logo-1.png" alt="Footer-logo" class="w-full h-auto">
-                </div>
-                
-                
-            </div>
-            
-            <div class="relative py-10 text-white "> 
-                
-                <p class="fhead mb-2 text-base overline" >&copy; 2024 KC Yazılım. All rights reserved.</p>
-               
-            </div>
-        </div>
-</footer>
-    
-    
-    
-       <script>
-            document.getElementById('menu-toggle').addEventListener('click', function () {
-                document.getElementById('mobile-menu').classList.add('open');
-            });
-
-            document.getElementById('menu-close').addEventListener('click', function () {
-                document.getElementById('mobile-menu').classList.remove('open');
-            });
-
-            document.querySelectorAll('.mobile-menu-item').forEach(item => {
-                item.addEventListener('click', function () {
-                    const dropdown = this.nextElementSibling;
-                    if (dropdown && dropdown.classList.contains('dropdown-menu')) {
-                        dropdown.classList.toggle('open');
+    <title>KC Yazılım Geliştirme ve Bilişim Teknolojileri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
                     }
-                });
-            });
-        </script>
-    <div class="hide-on-mobile" id="chatbot">
-        <div id="chatbot-header" onclick="toggleChat()">
-            <span>Bizimle iletişime geçin</span>
-        </div>
-        <div id="chatbot-body">
-            <div id="messages"></div>
-            <input type="text" id="userInput" placeholder="Bir mesaj yazın..." onkeypress="sendMessage(event)">
-        </div>
-    </div>
-    <script>// script.js
-
-        // Chatbot'u açıp kapatan fonksiyon
-        function toggleChat() {
-            var chatbotBody = document.getElementById('chatbot-body');
-            if (chatbotBody.style.display === "none" || chatbotBody.style.display === "") {
-                chatbotBody.style.display = "block";
-            } else {
-                chatbotBody.style.display = "none";
-            }
-        }
-        
-        // Mesaj gönderme fonksiyonu
-        function sendMessage(event) {
-            if (event.key === 'Enter') {
-                var userInput = document.getElementById('userInput').value;
-                if (userInput.trim() !== "") {
-                    var messagesDiv = document.getElementById('messages');
-                    var newMessage = document.createElement('div');
-                    newMessage.textContent = "Sen: " + userInput;
-                    messagesDiv.appendChild(newMessage);
-                    document.getElementById('userInput').value = "";
-        
-                    // Basit bir yanıt ekleme (Chatbot yanıtı)
-                    setTimeout(function() {
-                        var botMessage = document.createElement('div');
-                        botMessage.textContent = "KC Yazılım: " + "Merhabalar, mesajınız için teşekkürler! İletişime geçmek için info@kc.technology e-mailinden ulaşabilirsiniz.";
-                        messagesDiv.appendChild(botMessage);
-                        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-                    }, 1000);
                 }
             }
         }
-        </script>
-        <script>
-            document.querySelector('.dropdown-button').addEventListener('click', function() {
-    const dropdownContent = document.querySelector('.dropdown-content');
-    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-});
- 
-        </script>
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-bg {
+            background: linear-gradient(-45deg, #000000, #1a1a1a, #2d2d2d, #111111, #000000, #1f1f1f);
+            background-size: 400% 400%;
+            animation: gradient-x 15s ease infinite;
+        }
+        .dark-glass {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <!-- Fixed Header -->
+    <header class="fixed w-full top-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-white flex items-center">
+                    <div class="w-10 h-10 bg-white/20 rounded-xl mr-3 flex items-center justify-center">
+                        <i class="fas fa-code text-white text-lg"></i>
+                    </div>
+                    KC Technology
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white/90 hover:text-white transition duration-300 font-medium">Ana Sayfa</a>
+                    <a href="#about" class="text-white/90 hover:text-white transition duration-300 font-medium">Hakkımızda</a>
+                    <a href="#services" class="text-white/90 hover:text-white transition duration-300 font-medium">Hizmetler</a>
+                    <a href="#references" class="text-white/90 hover:text-white transition duration-300 font-medium">Referanslar</a>
+                    <a href="#contact" class="text-white/90 hover:text-white transition duration-300 font-medium">İletişim</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-white/90 hover:text-white transition duration-300">Ana Sayfa</a>
+                    <a href="#about" class="text-white/90 hover:text-white transition duration-300">Hakkımızda</a>
+                    <a href="#services" class="text-white/90 hover:text-white transition duration-300">Hizmetler</a>
+                    <a href="#references" class="text-white/90 hover:text-white transition duration-300">Referanslar</a>
+                    <a href="#contact" class="text-white/90 hover:text-white transition duration-300">İletişim</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-gray-800/20 rounded-full blur-xl animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-gray-700/10 rounded-full blur-2xl animate-float" style="animation-delay: -3s;"></div>
+            <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-gray-600/15 rounded-full blur-xl animate-float" style="animation-delay: -6s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10 pt-20">
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-8 animate-float">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gray-800/50 border border-gray-600 rounded-2xl mb-6 backdrop-blur-sm">
+                        <i class="fas fa-rocket text-4xl text-white"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-8 text-white leading-tight">
+                    <span class="block">KC Technology</span>
+                    <span class="block text-3xl md:text-4xl font-light mt-2 text-white/90">
+                        Yazılım & Bilişim Çözümleri
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-white/90 leading-relaxed">
+                    Geleceğin teknolojileri ile bugünün ihtiyaçlarını karşılıyoruz. 
+                    <span class="font-semibold text-white">Yapay zeka, bulut teknolojileri ve modern yazılım geliştirme</span> 
+                    ile işinizi dijital dönüşüme hazırlıyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-gray-200 transition duration-300 shadow-2xl hover:shadow-white/25 hover:scale-105 transform">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Projeni Başlat
+                    </a>
+                    <a href="#services" class="dark-glass text-white px-10 py-4 rounded-2xl font-bold hover:bg-black/60 transition duration-300 border border-gray-600 hover:scale-105 transform">
+                        <i class="fas fa-play mr-2"></i>
+                        Keşfet
+                    </a>
+                </div>
+                
+                <!-- Floating stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+                    <div class="dark-glass p-6 rounded-2xl text-center hover:bg-black/60 transition duration-300 border border-gray-800">
+                        <div class="text-3xl font-bold text-white mb-2">100+</div>
+                        <div class="text-gray-300">Tamamlanan Proje</div>
+                    </div>
+                    <div class="dark-glass p-6 rounded-2xl text-center hover:bg-black/60 transition duration-300 border border-gray-800">
+                        <div class="text-3xl font-bold text-white mb-2">50+</div>
+                        <div class="text-gray-300">Mutlu Müşteri</div>
+                    </div>
+                    <div class="dark-glass p-6 rounded-2xl text-center hover:bg-black/60 transition duration-300 border border-gray-800">
+                        <div class="text-3xl font-bold text-white mb-2">7/24</div>
+                        <div class="text-gray-300">Destek Hizmeti</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent text-lg font-semibold">HAKKIMIZDA</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Teknoloji ile Geleceği Şekillendiriyoruz</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-gray-600 to-gray-400 mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            KC Technology olarak, <strong class="text-white">2015 yılından bu yana</strong> Antalya merkezli olarak faaliyet göstermekte ve 
+                            teknoloji dünyasındaki en güncel gelişmeleri takip ederek müşterilerimize en iyi hizmeti sunmaya odaklanmaktayız.
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Deneyimli ekibimiz ile <strong class="text-white">web geliştirme, mobil uygulama, bulut teknolojileri, yapay zeka ve siber güvenlik</strong> 
+                            alanlarında kapsamlı çözümler üretiyoruz.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 pt-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                                <span class="text-gray-300 font-medium">ISO 27001 Sertifikalı</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                                <span class="text-gray-300 font-medium">Agile Metodoloji</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                                <span class="text-gray-300 font-medium">24/7 Teknik Destek</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                                <span class="text-gray-300 font-medium">Garantili Projeler</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-gray-800 via-black to-gray-900 border border-gray-700 rounded-3xl p-8 text-white">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-gray-700/50 border border-gray-600 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-lightbulb text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">İnovasyon</h3>
+                                        <p class="text-gray-300">En yeni teknolojileri kullanıyoruz</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-gray-700/50 border border-gray-600 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-users text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">Ekip Çalışması</h3>
+                                        <p class="text-gray-300">Deneyimli ve uzman kadromuz</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-gray-700/50 border border-gray-600 rounded-2xl flex items-center justify-center">
+                                        <i class="fas fa-trophy text-xl text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-white">Kalite</h3>
+                                        <p class="text-gray-300">Uluslararası standartlarda hizmet</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent text-lg font-semibold">HİZMETLERİMİZ</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Teknoloji Çözümlerimiz</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-gray-600 to-gray-400 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:bg-gray-800 hover:border-gray-700 transition duration-300 group">
+                    <div class="text-white text-4xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Web Geliştirme</h3>
+                    <p class="text-gray-400">Modern web uygulamaları ve responsive web siteleri geliştiriyoruz.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:bg-gray-800 hover:border-gray-700 transition duration-300 group">
+                    <div class="text-white text-4xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Mobil Uygulama</h3>
+                    <p class="text-gray-400">iOS ve Android platformları için kullanıcı dostu mobil uygulamalar.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:bg-gray-800 hover:border-gray-700 transition duration-300 group">
+                    <div class="text-white text-4xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Sistem Yönetimi</h3>
+                    <p class="text-gray-400">Sunucu yönetimi ve bilişim altyapı çözümleri sunuyoruz.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:bg-gray-800 hover:border-gray-700 transition duration-300 group">
+                    <div class="text-white text-4xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Siber Güvenlik</h3>
+                    <p class="text-gray-400">Veri güvenliği ve siber güvenlik danışmanlık hizmetleri.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:bg-gray-800 hover:border-gray-700 transition duration-300 group">
+                    <div class="text-white text-4xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Veri Analizi</h3>
+                    <p class="text-gray-400">İş zekası ve veri analizi çözümleri ile verilerinizi değere dönüştürün.</p>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-2xl hover:bg-gray-800 hover:border-gray-700 transition duration-300 group">
+                    <div class="text-white text-4xl mb-4 group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Bulut Hizmetleri</h3>
+                    <p class="text-gray-400">Cloud migration ve bulut tabanlı çözümler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="references" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent text-lg font-semibold">REFERANSLARIMIZ</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Güvenilen Partnerimiz</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-gray-600 to-gray-400 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+                <!-- Image 1 -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl hover:bg-gray-700 transition duration-300 flex items-center justify-center">
+                    <img src="pegas-logo.png" alt="Pegas Logo" class="w-full h-auto filter brightness-90 hover:brightness-110 transition duration-300">
+                </div>
+
+                <!-- Image 2 -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl hover:bg-gray-700 transition duration-300 flex items-center justify-center">
+                    <img src="logo-pgs.svg" alt="PGS Logo" class="w-full h-auto filter brightness-90 hover:brightness-110 transition duration-300">
+                </div>
+
+                <!-- Image 3 -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl hover:bg-gray-700 transition duration-300 flex items-center justify-center">
+                    <img src="logo-dessole.svg" alt="Dessole Logo" class="w-full h-auto filter brightness-90 hover:brightness-110 transition duration-300">
+                </div>
+
+                <!-- Image 4 -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl hover:bg-gray-700 transition duration-300 flex items-center justify-center">
+                    <img src="logo-swandor.svg" alt="Swandor Logo" class="w-full h-auto filter brightness-90 hover:brightness-110 transition duration-300">
+                </div>
+
+                <!-- Image 5 -->
+                <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl hover:bg-gray-700 transition duration-300 flex items-center justify-center">
+                    <img src="logo-woovo.svg" alt="Woovo Logo" class="w-full h-auto filter brightness-90 hover:brightness-110 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent text-lg font-semibold">İLETİŞİM</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">Bize Ulaşın</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-gray-600 to-gray-400 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-white">Bizimle İletişime Geçin</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center bg-gray-900 border border-gray-800 p-4 rounded-2xl">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">E-posta</p>
+                                <a href="mailto:info@kc.technology" class="text-gray-300 hover:text-white transition duration-300">info@kc.technology</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-gray-900 border border-gray-800 p-4 rounded-2xl">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Telefon</p>
+                                <a href="tel:+902423105400" class="text-gray-300 hover:text-white transition duration-300">0242 310 5400</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 border border-gray-800 p-4 rounded-2xl">
+                            <div class="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Adres</p>
+                                <p class="text-gray-300">ZERDALİLİK MAH. 19 MAYIS CAD. ŞİRİN APT NO: 29 İÇ KAPI NO: 1</p>
+                                <p class="text-gray-300">MURATPAŞA/ANTALYA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Ad Soyad</label>
+                            <input type="text" class="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-gray-600 text-white placeholder-gray-500" placeholder="Adınızı ve soyadınızı girin" required>
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">E-posta</label>
+                            <input type="email" class="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-gray-600 text-white placeholder-gray-500" placeholder="E-posta adresinizi girin" required>
+                        </div>
+                        <div>
+                            <label class="block text-white font-semibold mb-2">Mesaj</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-gray-600 text-white placeholder-gray-500" placeholder="Mesajınızı yazın..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-black py-3 rounded-xl font-bold hover:bg-gray-200 transition duration-300 hover:scale-105 transform">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Mesaj Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold text-white flex items-center mb-4">
+                        <div class="w-8 h-8 bg-gray-800 rounded-lg mr-3 flex items-center justify-center">
+                            <i class="fas fa-code text-white text-sm"></i>
+                        </div>
+                        KC Technology
+                    </div>
+                    <p class="text-gray-400 mb-4">Teknoloji ile geleceği şekillendiren yazılım ve bilişim çözümleri.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">Hızlı Linkler</h4>
+                    <div class="space-y-2">
+                        <a href="#home" class="block text-gray-400 hover:text-white transition duration-300">Ana Sayfa</a>
+                        <a href="#about" class="block text-gray-400 hover:text-white transition duration-300">Hakkımızda</a>
+                        <a href="#services" class="block text-gray-400 hover:text-white transition duration-300">Hizmetler</a>
+                        <a href="#contact" class="block text-gray-400 hover:text-white transition duration-300">İletişim</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-white">İletişim</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@kc.technology
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-phone mr-2"></i>
+                            0242 310 5400
+                        </p>
+                        <p class="text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Antalya, Türkiye
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-gray-800 mb-8">
+            <div class="text-center">
+                <p class="text-gray-500">&copy; 2024 KC Yazılım Geliştirme ve Bilişim Teknolojileri. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
-
 </html>
